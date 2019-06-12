@@ -1,39 +1,39 @@
 {
   "name": "mqtt-node",
-  "version": "0.8.1",
+  "version": "0.9.0",
   "description": "Client machine node for the lightweight MQTT machine network (LWMQN)",
   "main": "index.js",
   "scripts": {
     "lint": "standard --env mocha | snazzy",
     "lint-fix": "standard --env mocha --fix | snazzy",
-    "test": "nyc mocha -u bdd --reporter spec --exit",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "test": "nyc mocha --reporter=spec --exit",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "html-coverage": "npx nyc report --reporter=html"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tosscaster/mqtt-node.git"
+    "url": "https://github.com/lwmqn/mqtt-node.git"
   },
   "author": "Simen Li",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tosscaster/mqtt-node/issues"
+    "url": "https://github.com/lwmqn/mqtt-node/issues"
   },
-  "homepage": "https://github.com/tosscaster/mqtt-node",
+  "homepage": "https://github.com/lwmqn/mqtt-node",
   "dependencies": {
     "busyman": "^0.3.0",
     "debug": "^4.1.1",
     "lwmqn-util": "^0.5.1",
     "mqtt": "^3.0.0",
-    "network": "^0.4.1",
-    "smartobject": "^1.5.0"
+    "network": "^0.4.1"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
     "coveralls": "^3.0.4",
     "mocha": "^6.1.4",
     "nyc": "^14.1.1",
+    "rewire": "^4.0.1",
     "sinon": "^7.3.2",
-    "sinon-chai": "^3.3.0",
+    "smartobject": "^1.5.0",
     "snazzy": "^8.0.0",
     "standard": "^12.0.1"
   }
